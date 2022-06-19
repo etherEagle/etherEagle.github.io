@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" />
+
+    <title>Bootstrap - Image gallery 2</title>
+    <style>
+        figure {
+            margin: 0px 0;
+        }
+        
+        figcaption {
+            text-align: center;
+        }
+        
+        .grayscale {
+            filter: grayscale(0);
+        }
+        
+        .grayscale:hover {
+            filter: grayscale(50%)
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" id="myNav">
+        <!-- Brand -->
+        <a class="navbar-brand" href="">EatherEagle</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="navStory">Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="navAbout">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="navGallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="navFAQ">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+
+        <div class="jumbotron">
+            <h1 class="text-center">Eagles</h1>
+            <p class="text-center">The oceans cover more than 70 per cent of the Earth’s surface and the majority of life on Earth is aquatic.</p>
+        </div>
+
+        <div id="Story">
+            <h1>Story</h1>
+            <input type="button" id="b" value="XXX">
+
+            <section>
+                <div id="container"></div>
+                <div id="pagination"></div>
+            </section>
+
+            <p class="text-center">The oceans cover more than 70 per cent of the Earth’s surface and the majority of life on Earth is aquatic.</p>
+        </div>
+
+        <div id="About">
+            <h1>About</h1>
+            <p class="text-center">The oceans cover more than 70 per cent of the Earth’s surface and the majority of life on Earth is aquatic.</p>
+        </div>
+
+        <div class="row" id="Gallery">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/20_11_00_08_03.png" class="img-thumbnail grayscale" onclick="javascript:showimage('./images/20_11_00_08_03.png');" />
+                    <figcaption>image1</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/03_24_04_11_13.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 2</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/06_00_10_05_00.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 3</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/09_21_11_17_09.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 4</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/15_14_05_01_03.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 5</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/16_00_04_14_10.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 6</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/17_10_04_11_16.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 7</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/19_18_03_05_12.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 8</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/21_04_00_14_03.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 9</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/22_19_06_07_11.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 10</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./images/23_28_09_04_06.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 11</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <figure>
+                    <img src="./'images/25_04_09_18_05.png" class="img-thumbnail grayscale" />
+                    <figcaption>Eagle 12</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div id="FAQ">
+            <h1>FAQ</h1>
+            <p class="text-center">The oceans cover more than 70 per cent of the Earth’s surface and the majority of life on Earth is aquatic.</p>
+        </div>
+
+    </div>
+
+    <!--弹出模态框大图-->
+    <div class="modal fade" id="ShowImage_Form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div id="img_show"></div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+<script>
+    function showimage(source) {
+        $("#ShowImage_Form").find("#img_show").html("<image src='" + source + "' class='carousel-inner img-responsive img-rounded' />");
+        $("#ShowImage_Form").modal();
+    }
+
+    var navHeight = document.getElementById("myNav").offsetHeight;
+    $("#navStory").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#Story").offset().top - navHeight
+        }, 200);
+    });
+
+    $("#navAbout").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#About").offset().top - navHeight
+        }, 200);
+    });
+
+    $("#navGallery").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#Gallery").offset().top - navHeight
+        }, 200);
+    });
+
+    $("#navFAQ").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#FAQ").offset().top - navHeight
+        }, 200);
+    });
+</script>
+
+<script>
+    xList = [
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+        "images/20_11_00_08_03.png", "images/03_24_04_11_13.png", "images/06_00_10_05_00.png", "images/09_21_11_17_09.png",
+        "images/15_14_05_01_03.png", "images/16_00_04_14_10.png", "images/17_10_04_11_16.png", "images/19_18_03_05_12.png",
+        "images/21_04_00_14_03.png", "images/22_19_06_07_11.png", "images/23_28_09_04_06.png", "images/25_04_09_18_05.png",
+    ];
+    y = [];
+    var rule1 = /2\d{1}_\d{2}_\d{2}_\d{2}_\d{2}/;
+
+
+
+
+    X = 'images/22_19_06_07_11.png';
+    X1 = 'images/23_28_09_04_06.png';
+    X2 = '22';
+    //var str = '22';
+    $("#b").on('click', function() {
+        y = [];
+        for (var x in xList) {
+            if (rule1.test(xList[x])) {
+                y.push({
+                    number: "./" + xList[x]
+                });
+            }
+        }
+        console.log(y);
+        //y = y2
+        let container = $('#pagination');
+        container.pagination({
+            dataSource: y,
+            pageSize: 5,
+            callback: function(data, pagination) {
+                var dataHtml = '<div class="row" id="Gallery">';
+                $.each(data, function(index, item) {
+                    dataHtml += '<div class="col-sm-6 col-md-4 col-lg-3"><figure> <img src="' +
+                        item.number + '" class="img-thumbnail grayscale" /><figcaption>Eagle 10</figcaption></figure></div>';
+                });
+                dataHtml += '</div>';
+                $("#container").html(dataHtml);
+            }
+        })
+
+    });
+    y1 = [{
+        number: "./" + X
+    }, {
+        number: "./" + X1
+    }, {
+        number: "./images/22_19_06_07_11.png"
+    }, {
+        number: "./images/22_19_06_07_11.png"
+    }, {
+        number: "./images/22_19_06_07_11.png"
+    }, {
+        number: "./images/22_19_06_07_11.png"
+    }]
+
+    y2 = [{
+        number: "./" + X
+    }, {
+        number: "./" + X1
+    }, {
+        number: "./images/22_19_06_07_11.png"
+    }, {
+        number: "./images/22_19_06_07_11.png"
+    }, {
+        number: "./images/22_19_06_07_11.png"
+    }, {
+        number: "./images/22_19_06_07_11.png"
+    }]
+
+
+    for (var x in xList) {
+        y.push({
+            number: "./" + xList[x]
+        });
+    }
+    $(function() {
+        let container = $('#pagination');
+        container.pagination({
+            dataSource: y,
+            pageSize: 5,
+            callback: function(data, pagination) {
+                var dataHtml = '<div class="row" id="Gallery">';
+
+                $.each(data, function(index, item) {
+                    dataHtml += '<div class="col-sm-6 col-md-4 col-lg-3"><figure> <img src="' +
+                        item.number + '" class="img-thumbnail grayscale" /><figcaption>Eagle 10</figcaption></figure></div>';
+                });
+
+                dataHtml += '</div>';
+
+                $("#container").html(dataHtml);
+            }
+        })
+    })
+</script>
